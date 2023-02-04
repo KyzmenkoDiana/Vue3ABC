@@ -2,17 +2,12 @@
 export default {
   data() {
     return {
-      name: 'diana',
-      surn: 'kuzmenko',
+      text: 'page',
+      href: 'page.html',
     }
   }
 }
 </script>
 <template>
-  <div>
-    Diana
-  </div>
-  <div>
-    Kuzmenko
-  </div>
+  <a href="page.html">page</a>
 </template>
