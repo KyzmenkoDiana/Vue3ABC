@@ -1,10 +1,18 @@
 <script>
 export default {
-  name: 'App',
+  data() {
+    return {
+      name: 'diana',
+      surn: 'kuzmenko',
+    }
+  }
 }
 </script>
 <template>
   <div>
-    Hi, my name Diana)
+    Diana
+  </div>
+  <div>
+    Kuzmenko
   </div>
 </template>
