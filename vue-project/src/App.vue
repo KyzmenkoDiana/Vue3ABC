@@ -11,5 +11,6 @@ export default {
 }
 </script>
 <template>
-    <button @click="show">date</button>
+    <!-- <button @click="show">По клику</button>-->
+    <button v-on:mouseover="show">Мышкой</button>
 </template>
