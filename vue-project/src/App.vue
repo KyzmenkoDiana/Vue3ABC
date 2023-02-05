@@ -2,12 +2,8 @@
 export default {
     data() {
         return {
-
-        }
-    },
-    methods: {
-        show: function () {
-            alert('!');
+            visible1: true,
+            visible2: false,
         }
     }
 }
@@ -15,9 +11,8 @@ export default {
 </script>
 
 <template>
-    <a class="inline-link-1" href="https://www.google.ru " onclick="event.preventDefault()">Diana</a>
-    <br>
-    <br>
-    <button @click.once="show">Diana</button>
+    <p v-if="visible1">Hello my name Diana</p>
+    <h1></h1>
+    <p v-if="visible2">I life in Armyansk</p>
 </template>
 
