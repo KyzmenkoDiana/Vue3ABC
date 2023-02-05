@@ -1,16 +1,19 @@
 <script>
 export default {
     data() {
-
+        return {
+            num1: 48,
+            num2: 25,
+        }
     },
     methods: {
-        show: function () {
-            alert(new Date().toLocaleDateString());
+        show: function (str) {
+            return str[0].toUpperCase() + str.slice(1);
         }
     }
 }
 </script>
 <template>
-    <!-- <button @click="show">По клику</button>-->
-    <button v-on:mouseover="show">Мышкой</button>
+    <div>{{ num1 + num2 }}</div>
 </template>
+
