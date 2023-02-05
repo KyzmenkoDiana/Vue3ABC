@@ -11,5 +11,5 @@ export default {
 }
 </script>
 <template>
-    <button @click="show">date</button>
+    {{ show() }}
 </template>
