@@ -2,23 +2,30 @@
 export default {
     data() {
         return {
-            text: 'Diana',
+            cost: 150,
+            amount: 7,
         }
     },
     methods: {
         change: function () {
-            this.text = 'Polina';
+            this.cost = 200;
         },
         change2: function () {
-            this.text = 'Diana';
-        }/*тут и 1 и 2 и 3 задание*/
+            this.cost = 250;
+        }
+    },
+    computed: {
+        price: function () {
+            return this.cost * this.amount;
+        }
     }
 }
 </script>
 
 <template>
-    {{ text }}
-    <button @click="change">text</button>
-    <button @click="change2">text</button>
+    <p>{{ price }}</p>
+    {{ cost }}
+    <button @click="change">cost</button>
+    <button @click="change2">cost</button>
 </template>
 
