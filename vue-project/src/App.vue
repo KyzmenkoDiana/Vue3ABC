@@ -2,27 +2,23 @@
 export default {
     data() {
         return {
-            date: '3'
+            text: 'Diana',
         }
     },
     methods: {
-        show: function () {
-            let date = this.dayOfWeek(this.date);
-            alert(date);
+        change: function () {
+            this.text = 'Polina';
         },
-        dayOfWeek: function (date) {
-            let days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
-            return days[date];
-        },
-        main: function () {
-            const dayOfWeekDigit = new Date().getDay();
-            let days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
-            return dayOfWeekDigit[days]
-        },
+        change2: function () {
+            this.text = 'Diana';
+        }/*тут и 1 и 2 и 3 задание*/
     }
 }
 </script>
+
 <template>
-    <button v-on:mouseover="show">Мышкой </button>
+    {{ text }}
+    <button @click="change">text</button>
+    <button @click="change2">text</button>
 </template>
 
