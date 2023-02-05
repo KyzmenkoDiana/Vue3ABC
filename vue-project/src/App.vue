@@ -2,15 +2,20 @@
 export default {
     data() {
         return {
-            hidden1: false,
+            visible1: false,
+            visible2: false,
+            visible3: false,
         }
     },
     methods: {
-        hide: function () {
-            this.hidden1 = true;
+        toggle: function () {
+            this.visible1 = !this.visible1;
         },
-        hide2: function () {
-            this.hidden1 = false;
+        toggle2: function () {
+            this.visible2 = !this.visible2;
+        },
+        toggle3: function () {
+            this.visible3 = !this.visible3;
         }
     }
 }
@@ -18,8 +23,13 @@ export default {
 </script>
 
 <template>
-    <p v-if="hidden1">Hello my name is Diana</p>
-    <button @click="hide">Нажми</button>
-    <button @click="hide2">Упсс</button>
+    <button @click="toggle">Toggle</button>
+    <p v-if="visible1">Hello my name Diana</p>
+    <p></p>
+    <button @click="toggle2">Toggle2</button>
+    <p v-if="visible2">I life in Armyansk</p>
+    <p></p>
+    <button @click="toggle3">Toggle3</button>
+    <p v-if="visible3">Hello world!</p>
 </template>
 
