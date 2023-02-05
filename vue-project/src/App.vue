@@ -1,33 +1,20 @@
-<!-- 1 задание
 <script>
 export default {
-  data() {
-    return {
-      num: 2003,
-    }
-  }
-}
-</script>
-<template>
-  <input v-model="num">
-</template>
--->
+    data() {
+        return {
+            /* arr: ['x', 'y', 'z'],*/
+            arr1: [1, 2, 3],
 
-<!--  2 задание-->
-<script>
-export default {
-  data() {
-    return {
-      num1: 10,
-      num2: 37,
-      num3: 2,
+        }
     }
-  }
 }
 </script>
 <template>
-  {{ num1 + num2 + num3 }}
-  <div id="app">
-  </div>
+    <!--1-->
+    <!--<div>{{ arr[0] }}</div>
+    <div>{{ arr[1] }}</div>
+    <div>{{ arr[2] }}</div> -->
+    <!--2-->
+    <div>{{ arr1[0] + arr1[1] + arr1[2] }}</div>
 </template>
 
