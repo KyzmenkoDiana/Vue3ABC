@@ -2,30 +2,22 @@
 export default {
     data() {
         return {
-            cost: 150,
-            amount: 7,
+
         }
     },
     methods: {
-        change: function () {
-            this.cost = 200;
-        },
-        change2: function () {
-            this.cost = 250;
-        }
-    },
-    computed: {
-        price: function () {
-            return this.cost * this.amount;
+        show: function () {
+            alert('!');
         }
     }
 }
+
 </script>
 
 <template>
-    <p>{{ price }}</p>
-    {{ cost }}
-    <button @click="change">cost</button>
-    <button @click="change2">cost</button>
+    <a class="inline-link-1" href="https://www.google.ru " onclick="event.preventDefault()">Diana</a>
+    <br>
+    <br>
+    <button @click.once="show">Diana</button>
 </template>
 
