@@ -2,19 +2,15 @@
 export default {
     data() {
         return {
-            items: [1, 2, 3, 4, 5],
+            arr: ['x', 'y', 'z'],
         }
     }
 }
 </script>
 
 <template>
-    <div class="diana" v-for="elem in items">{{ elem }}</div>
-    <p></p>
-    <p></p>
-    <div class="diana" v-for="elem in items">{{ elem*elem }}</div>
-    <p></p>
-    <ul class="diana" v-for="elem in items">{{ elem }}</ul>
+    <ul v-for="(elem, key) in arr">
+        {{ key }} {{ elem }} </ul>
 </template>
 <style>
 .diana {
