@@ -2,24 +2,27 @@
 export default {
     data() {
         return {
-
+            isValid: true,
+            isDisabled: true,
         }
     }
 }
 </script>
 
 <template>
-    <ul :class="{ active: true, valid: false }">
-        Hello my name Diana
-    </ul>
+    <p :class="{ Valid: isValid }">
+        Hello my name Diana </p>
+    <b></b>
+    <p :class="{ Disabled: isDisabled }">
+        I life in Armyansk </p>
 </template>
 <style>
-.active {
+.Valid {
     color: blue;
     font-size: 20px;
 }
 
-.valid {
+.Disabled {
     color: red;
     font-size: 20px;
 }
