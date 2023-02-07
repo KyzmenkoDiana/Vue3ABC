@@ -2,22 +2,38 @@
 export default {
     data() {
         return {
-            age: 25
+            diana: true,
+        }
+    },
+    methods: {
+        Diana: function () {
+            this.diana = false;
         }
     }
 }
-
 </script>
 
 <template>
-    <p class="diana" v-if="age < 18">подросток</p>
-    <p class="diana" v-else-if="age > 19 < 25">молодой человек</p>
-    <p class="diana" v-else-if="age > 26">мужчина</p>
-    <p class="diana" v-else>error</p>
+    <button @click="Diana">diana</button>
+    <div v-if="diana">
+        <p class="diana">Djulia</p>
+        <p class="diana1">Vector</p>
+        <p class="diana2">Flaffi</p>
+    </div>
 </template>
 <style>
 .diana {
     color: blue;
+    font-size: 30px;
+}
+
+.diana1 {
+    color: red;
+    font-size: 30px;
+}
+
+.diana2 {
+    color: yellow;
     font-size: 30px;
 }
 </style>
