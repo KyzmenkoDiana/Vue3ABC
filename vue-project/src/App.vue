@@ -2,19 +2,29 @@
 export default {
     data() {
         return {
-            items: [1, -2, 3, -4, 5],
+            products: [
+                {
+                    id: 1,
+                    name: 'Djuliet',
+                },
+                {
+                    id: 2,
+                    name: 'Vector',
+                },
+                {
+                    id: 3,
+                    name: 'Flaffi',
+                },
+            ]
         }
     }
 }
 </script>
 
 <template>
-    <ul>
-        <template v-for="elem in items">
-            <li class="diana" v-if="elem > -1">
-                {{ elem }}
-            </li>
-        </template>
+
+    <ul class="diana" v-for="user in products" :key="user.id">
+        {{ user.name }}
     </ul>
 </template>
 <style>
