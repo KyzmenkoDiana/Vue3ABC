@@ -2,21 +2,23 @@
 export default {
     data() {
         return {
-
+            message: 'Diana Kuzmenko',
+            number: '45',
         }
     }
 }
 </script>
 
 <template>
-    <p :style="{ color: 'green', background: 'yellow', fontSize: '30px' }">
-        Hello my name Diana!
-    </p>
-    <b></b>
-    <p :style="{ color: 'blue', fontFamily: 'Arial Black', fontStyle: 'italic' }">
-        Hello my name Diana!
-    </p>
+    <input class="diana" v-model="message">
+    <p :style="{ textTransform: 'uppercase' }">{{ message }}</p>
+    <br>
+    <input class="diana" v-model="number">
+    <p>{{ number*number }}</p>
 </template>
 <style>
-
+.diana {
+    color: blue;
+    font-size: 20px;
+}
 </style>
