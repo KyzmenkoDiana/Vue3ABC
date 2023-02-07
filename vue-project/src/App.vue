@@ -2,28 +2,21 @@
 export default {
     data() {
         return {
-            isValid: true,
-            isDisabled: true,
+
         }
     }
 }
 </script>
 
 <template>
-    <p :class="{ Valid: isValid }">
-        Hello my name Diana </p>
+    <p :style="{ color: 'green', background: 'yellow', fontSize: '30px' }">
+        Hello my name Diana!
+    </p>
     <b></b>
-    <p :class="{ Disabled: isDisabled }">
-        I life in Armyansk </p>
+    <p :style="{ color: 'blue', fontFamily: 'Arial Black', fontStyle: 'italic' }">
+        Hello my name Diana!
+    </p>
 </template>
 <style>
-.Valid {
-    color: blue;
-    font-size: 20px;
-}
 
-.Disabled {
-    color: red;
-    font-size: 20px;
-}
 </style>
