@@ -2,29 +2,23 @@
 export default {
     data() {
         return {
-            Avocado: true,
-        }
-    },
-    methods: {
-        Diana: function () {
-            this.Avocado = false;
+            items: [1, 2, 3, 4, 5],
         }
     }
 }
 </script>
 
 <template>
-    <!--1-->
-    <button @click="Diana">Diana</button>
-    <p class="Avocado" v-show="Avocado">Djulia</p>
-    <!--
-        2 - v-show будет всегда отрисовываться и оставаться в DOM, a v-if выполняет настоящую условную отрисовку.
-        3 - v-if если условие ложно на момент первоначальной отрисовки, v-show элемент всегда отрисовывается
-        4 - директиву v-show нельзя использовать на элементе template и она не работает с v-else.-->
+    <div class="diana" v-for="elem in items">{{ elem }}</div>
+    <p></p>
+    <p></p>
+    <div class="diana" v-for="elem in items">{{ elem*elem }}</div>
+    <p></p>
+    <ul class="diana" v-for="elem in items">{{ elem }}</ul>
 </template>
 <style>
-.Avocado {
+.diana {
     color: blue;
-    font-size: 30px;
+    font-size: 20px;
 }
 </style>
