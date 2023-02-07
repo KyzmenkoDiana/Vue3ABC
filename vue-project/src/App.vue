@@ -2,7 +2,7 @@
 export default {
     data() {
         return {
-            day: 5
+            age: 25
         }
     }
 }
@@ -10,13 +10,10 @@ export default {
 </script>
 
 <template>
-    <p class="diana" v-if="day === 1">понедельник</p>
-    <p class="diana" v-if="day === 2">вторник</p>
-    <p class="diana" v-if="day === 3">среда</p>
-    <p class="diana" v-if="day === 4">четверг</p>
-    <p class="diana" v-if="day === 5">пятница</p>
-    <p class="diana" v-if="day === 6">суббота</p>
-    <p class="diana" v-if="day === 7">воскресенье</p>
+    <p class="diana" v-if="age < 18">подросток</p>
+    <p class="diana" v-else-if="age > 19 < 25">молодой человек</p>
+    <p class="diana" v-else-if="age > 26">мужчина</p>
+    <p class="diana" v-else>error</p>
 </template>
 <style>
 .diana {
