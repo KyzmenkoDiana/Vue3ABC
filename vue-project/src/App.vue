@@ -2,22 +2,25 @@
 export default {
     data() {
         return {
-            cssClasses: 'Avocado',
+            obj: {
+                done: false,
+                selected: true,
+            }
         }
     }
 }
 </script>
 
 <template>
-    <p :class="cssClasses">Avocado</p>
+    <p :class="obj">Avocado</p>
 </template>
 <style>
-.Avocado {
+.done {
     color: red;
     font-size: 20px;
 }
 
-p1 {
+.selected {
     color: blue;
     font-size: 20px;
 }
