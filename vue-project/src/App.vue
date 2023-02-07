@@ -2,14 +2,14 @@
 export default {
     data() {
         return {
-            visible1: false,
-            visible2: false,
-            visible3: false,
+            visible: true,
+            visible2: true,
+            visible3: true
         }
     },
     methods: {
         toggle: function () {
-            this.visible1 = !this.visible1;
+            this.visible = !this.visible;
         },
         toggle2: function () {
             this.visible2 = !this.visible2;
@@ -23,13 +23,31 @@ export default {
 </script>
 
 <template>
-    <button @click="toggle">Toggle</button>
-    <p v-if="visible1">Hello my name Diana</p>
-    <p></p>
-    <button @click="toggle2">Toggle2</button>
-    <p v-if="visible2">I life in Armyansk</p>
-    <p></p>
-    <button @click="toggle3">Toggle3</button>
-    <p v-if="visible3">Hello world!</p>
+    <button class="clic" @click="toggle">toggle</button>
+    <p class="diana">{{ visible? 'Avocado': 'Julia' }}</p>
+    <button class="clic" @click="toggle2">toggle</button>
+    <p class="diana1">{{ visible2? 'Avocado': 'Vector' }}</p>
+    <button class="clic" @click="toggle3">toggle</button>
+    <p class="diana2">{{ visible3? 'Avocado': 'Flaffi' }}</p>
 </template>
+<style>
+.diana {
+    color: blue;
+    font-size: 30px;
+}
 
+.clic {
+    color: black;
+    font-size: 30px;
+}
+
+.diana1 {
+    color: red;
+    font-size: 30px;
+}
+
+.diana2 {
+    color: green;
+    font-size: 30px;
+}
+</style>
