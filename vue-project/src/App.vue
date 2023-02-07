@@ -2,18 +2,17 @@
 export default {
     data() {
         return {
+            cssClasses: 'Avocado',
         }
     }
 }
 </script>
 
 <template>
-    <p>Hello my name Diana</p>
-    <p></p>
-    <p1>I life in Armyansk</p1>
+    <p :class="cssClasses">Avocado</p>
 </template>
 <style>
-p {
+.Avocado {
     color: red;
     font-size: 20px;
 }
