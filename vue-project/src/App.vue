@@ -21,14 +21,16 @@ export default {
                     salary: 300,
                     age: 50,
                 },
-                methods: {
-                    Diana: function (id) {
-                        this.users = this.users.filter((user) => {
-                            return user.id !== id;
-                        })
-                    }
-                }
-    }
+            ]
+
+        }
+    },
+    methods: {
+        Diana: function (id) {
+            this.users = this.users.filter((user) => {
+                return user.id !== id;
+            })
+        }
     }
 }
 </script>
