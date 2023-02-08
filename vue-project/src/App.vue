@@ -2,32 +2,25 @@
 export default {
     data() {
         return {
-            selected: 'data',
-            options: ['1', '2', '3', '4', '5', '6', '7'],
-            selected1: 'month',
-            options1: ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль'],
-            selected2: 'year',
-            options2: ['20014', '2015', '2016', '2017', '2018', '2019', '2020'],
+            isDisabled: true,
+            open: true,
+            checked: false,
+        }
+    },
+    methods: {
+        toggle: function () {
+            this.isDisabled = !this.isDisabled;
         }
     }
 }
 </script>
 
 <template>
-    <select v-model="selected">
-        <option class="diana" v-for="option in options">{{ option }}</option>
-    </select>
-    <p>{{ selected }}</p>
-    <b></b>
-    <select v-model="selected1">
-        <option class="diana1" v-for="option in options1">{{ option }}</option>
-    </select>
-    <p>{{ selected1 }}</p>
-    <b></b>
-    <select v-model="selected2">
-        <option class="diana2" v-for="option in options2">{{ option }}</option>
-    </select>
-    <p>{{ selected2 }}</p>
+
+    <button class="diana" @click="toggle">Hello</button>
+    <button v-bind:disabled="isDisabled">Hello</button>
+    <button v-bind:disabled="checked">Good bay</button>
+    <input type="checkbox" v-model="checked" @click="clic">
 </template>
 <style>
 .diana {
