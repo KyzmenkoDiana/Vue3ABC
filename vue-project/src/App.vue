@@ -2,28 +2,40 @@
 export default {
     data() {
         return {
-            arr: [],
+            language: '',
+            d: false,
+            di: false,
+            diana: false
+        }
+    },
+    methods: {
+        Djuliet() {
+            this.d = true;
+        },
+        Vector() {
+            this.di = true;
+        },
+        Flaffi() {
+            this.diana = true;
         }
     }
 }
 </script>
 
 <template>
-    <div class="diana">
-        <input class="diana1" type="checkbox" v-model="arr" value="English">
-        <label>English</label>
-        <br>
-        <input class="diana1" type="checkbox" v-model="
-        arr" value="Turkish">
-        <label>Turkish</label>
-        <br>
-        <input class="diana1" type="checkbox" v-model="arr" value="Ukrainian">
-        <label>Ukrainian</label>
-        <ol>
-            <ul v-for="elem in arr">{{ elem }}</ul>
-        </ol>
-    </div>
-    <br>
+    <input type="radio" v-model="language" value="Turkish" @click="Djuliet">
+    <p class="diana">Turkish</p>
+    <p></p>
+    <input type="radio" v-model="language" value="Ukrainian" @click="Vector">
+    <p class="diana">Ukrainian</p>
+    <p></p>
+    <input type="radio" v-model="language" value="Russian" @click="Flaffi">
+    <p></p>
+    <p class="diana">Russian</p>
+    <p class="diana1" v-if="d">Mahraba, benim adim Diana</p>
+    <p class="diana1" v-else-if="di">Привiт, мене звуть Дiана</p>
+    <p class="diana1" v-else-if="diana">Привет, меня зовут Диана</p>
+
 </template>
 <style>
 .diana {
