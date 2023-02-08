@@ -9,8 +9,7 @@ export default {
 </script>
 
 <template>
-    <Employee />
-    <p class="diana">Avocado</p>
+    <Employee name="Diana" surn="Kuzmenko" age="19" />
 </template>
 <style>
 .diana {

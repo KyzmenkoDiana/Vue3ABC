@@ -1,13 +1,15 @@
 <script>
 export default {
+    props: ['name', 'surn', 'age'],
     data() {
         return {
-            name: 'Vector'
+
         }
     }
 }
-
 </script>
 <template>
-    {{ name }}
+    <p class="diana">{{ name }}</p>
+    <p class="diana">{{ surn }}</p>
+    <p class="diana">{{ age }}</p>
 </template>
