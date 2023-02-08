@@ -1,14 +1,16 @@
 <script>
+import Employee from './components/User.vue'
+
 export default {
-    data() {
-        return {
-        }
+    components: {
+        Employee
     }
 }
 </script>
 
 <template>
-    <p class="diana">В этом задании был только текст про компоненты</p>
+    <Employee />
+    <p class="diana">Avocado</p>
 </template>
 <style>
 .diana {
