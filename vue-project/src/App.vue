@@ -1,26 +1,30 @@
 <script>
+import { enableTracking } from '@vue/reactivity';
+
 export default {
     data() {
         return {
-            isDisabled: true,
-            open: true,
-            checked: false,
+            newAvocado: 'Vector',
+            Avocado: ['a', 'b', 'c', 'd', 'e'],
+
         }
     },
     methods: {
-        toggle: function () {
-            this.isDisabled = !this.isDisabled;
+        addItem: function () {
+            this.Avocado.push(this.newAvocado);
         }
     }
 }
 </script>
 
 <template>
-
-    <button class="diana" @click="toggle">Hello</button>
-    <button v-bind:disabled="isDisabled">Hello</button>
-    <button v-bind:disabled="checked">Good bay</button>
-    <input type="checkbox" v-model="checked" @click="clic">
+    <ul>
+        <li class="diana" v-for="(item, index) in Avocado" :key="index">
+            {{ item }}
+        </li>
+    </ul>
+    <input v-model="newAvocado">
+    <button @click="addItem">add</button>
 </template>
 <style>
 .diana {
