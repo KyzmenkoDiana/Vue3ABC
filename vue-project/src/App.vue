@@ -2,7 +2,12 @@
 export default {
     data() {
         return {
-            selected: 'Where do you live',
+            selected: 'data',
+            options: ['1', '2', '3', '4', '5', '6', '7'],
+            selected1: 'month',
+            options1: ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль'],
+            selected2: 'year',
+            options2: ['20014', '2015', '2016', '2017', '2018', '2019', '2020'],
         }
     }
 }
@@ -10,12 +15,19 @@ export default {
 
 <template>
     <select v-model="selected">
-        <option class="diana">Turkish</option>
-        <option class="diana1">Russian</option>
-        <option class="diana2">USA</option>
+        <option class="diana" v-for="option in options">{{ option }}</option>
     </select>
-
     <p>{{ selected }}</p>
+    <b></b>
+    <select v-model="selected1">
+        <option class="diana1" v-for="option in options1">{{ option }}</option>
+    </select>
+    <p>{{ selected1 }}</p>
+    <b></b>
+    <select v-model="selected2">
+        <option class="diana2" v-for="option in options2">{{ option }}</option>
+    </select>
+    <p>{{ selected2 }}</p>
 </template>
 <style>
 .diana {
@@ -27,6 +39,6 @@ export default {
 }
 
 .diana2 {
-    color: green;
+    color: rebeccapurple;
 }
 </style>
