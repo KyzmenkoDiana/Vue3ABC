@@ -1,6 +1,13 @@
 <script>
 import Avocado from './components/User.vue'
 export default {
+    data() {
+        return {
+            name: 'Vector Avocado',
+            salary: '9540',
+            age: '26',
+        }
+    },
     components: {
         Avocado
     }
@@ -8,7 +15,7 @@ export default {
 </script>
 
 <template>
-    <Avocado :arg="{ a: 1, b: 2, c: 3 }" />
+    <Avocado :name="name" :salary="salary" :age="age" />
 </template>
 <style>
 .diana {
