@@ -1,18 +1,22 @@
-<!--<script>
+<script>
 export default {
-    props: ['initialCounter'],
+    emits: ['show', 'show1'],
     data() {
         return {
-            counter: this.initialCounter
         }
+    },
+    methods: {
+        diana() {
+            this.$emit('show');
+        },
+        diana1() {
+            this.$emit('show1');
+        },
     }
 }
 </script>
 
 <template>
-    <ul>
-        <p class="diana">
-            {{ counter }}
-        </p>
-    </ul>
-</template>-->
+    <button class="diana" @click="diana">Name</button>
+    <button class="diana1" @click="diana1">Data</button>
+</template>

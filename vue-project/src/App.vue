@@ -1,31 +1,27 @@
 <script>
-
+import Avocado from './components/User.vue'
 export default {
     data() {
         return {
-            a: 'Vector',
-            b: 'Flaffi',
-            c: 'Djuliet',
-            Avocado: true,
+
         }
     },
+    components: {
+        Avocado
+    },
     methods: {
-        Diana() {
-            alert('Avocado');
+        name() {
+            alert('Vector Avocado');
         },
+        data() {
+            alert('09.02.2023')
+        }
     }
 }
 </script>
 
 <template>
-    <!--В этом задании был только текст. Прочитала, ознакомилась.-->
-    <button class="diana" @click="Diana">Avocado</button>
-    <br>
-    <p class="diana1">{{ a }}</p>
-    <br>
-    <p class="diana2">{{ b }}</p>
-    <br>
-    <p class="diana3">{{ c }}</p>
+    <Avocado @show="name" @show1="data" />
 </template>
 <style>
 .diana {
