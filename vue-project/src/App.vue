@@ -10,18 +10,18 @@ export default {
         Avocado
     },
     methods: {
-        name() {
-            alert('Vector Avocado');
+        diana1(name, salary) {
+            console.log(name, salary);
         },
-        data() {
-            alert('09.02.2023')
+        func(name) {
+            console.log(name);
         }
     }
 }
 </script>
 
 <template>
-    <Avocado @show="name" @show1="data" />
+    <Avocado @show="diana1" @show1="func" />
 </template>
 <style>
 .diana {

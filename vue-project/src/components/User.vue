@@ -7,16 +7,16 @@ export default {
     },
     methods: {
         diana() {
-            this.$emit('show');
+            this.$emit('show', 'Vector', '8352');
         },
         diana1() {
-            this.$emit('show1');
-        },
+            this.$emit('show1', 'Vector');
+        }
     }
 }
 </script>
 
 <template>
-    <button class="diana" @click="diana">Name</button>
-    <button class="diana1" @click="diana1">Data</button>
+    <button class="diana" @click="diana">console</button>
+    <button class="diana" @click="diana1">console1</button>
 </template>
