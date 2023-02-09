@@ -1,15 +1,14 @@
 <script>
-import Employee from './components/User.vue'
-
+import Avocado from './components/User.vue'
 export default {
     components: {
-        Employee
+        Avocado
     }
 }
 </script>
 
 <template>
-    <Employee name="Diana" surn="Kuzmenko" age="19" />
+    <Avocado :arg="{ a: 1, b: 2, c: 3 }" />
 </template>
 <style>
 .diana {

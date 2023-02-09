@@ -1,15 +1,15 @@
 <script>
 export default {
-    props: ['name', 'surn', 'age'],
+    props: ['arg'],
     data() {
         return {
-
         }
     }
 }
 </script>
+
 <template>
-    <p class="diana">{{ name }}</p>
-    <p class="diana">{{ surn }}</p>
-    <p class="diana">{{ age }}</p>
+    <ul class="styled">
+        <li class="diana" v-for="Avocado in arg">{{ Avocado }}</li>
+    </ul>
 </template>
