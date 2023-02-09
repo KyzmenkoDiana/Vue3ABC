@@ -1,11 +1,29 @@
 <script>
 import Avocado from './components/User.vue'
+
 export default {
     data() {
         return {
-            name: 'Vector Avocado',
-            salary: '9540',
-            age: '26',
+            diana: [
+                {
+                    id: 1,
+                    name: 'Djuliet',
+                    salary: 730,
+                    age: 20,
+                },
+                {
+                    id: 2,
+                    name: 'Vector',
+                    salary: 1000,
+                    age: 26,
+                },
+                {
+                    id: 3,
+                    name: 'Flaffi',
+                    salary: 300,
+                    age: 10,
+                }
+            ]
         }
     },
     components: {
@@ -15,7 +33,8 @@ export default {
 </script>
 
 <template>
-    <Avocado :name="name" :salary="salary" :age="age" />
+    <Avocado v-for="Avocado in diana" :name="Avocado.name" :salary="Avocado.salary" :age="Avocado.age"
+        :key="Avocado.id" />
 </template>
 <style>
 .diana {
