@@ -1,9 +1,9 @@
 <script>
 export default {
-    props: ['name', 'salary', 'age'],
-    data() {
-        return {
-        }
+    props: {
+        name: String,
+        salary: Number,
+        age: Number,
     }
 }
 </script>
