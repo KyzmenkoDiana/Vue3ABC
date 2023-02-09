@@ -10,18 +10,15 @@ export default {
         Avocado
     },
     methods: {
-        diana1(name, salary) {
-            console.log(name, salary);
-        },
-        func(name) {
-            console.log(name);
+        diana1(name, age) {
+            console.log(name, age);
         }
     }
 }
 </script>
 
 <template>
-    <Avocado @show="diana1" @show1="func" />
+    <Avocado @show="diana1" />
 </template>
 <style>
 .diana {
