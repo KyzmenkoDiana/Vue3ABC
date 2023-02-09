@@ -1,5 +1,5 @@
 <script>
-import Avocado from './components/User.vue'
+import AvocadoForm from './components/User.vue'
 export default {
     data() {
         return {
@@ -23,32 +23,26 @@ export default {
         }
     },
     methods: {
-        change(id, name, surn) {
-            this.users = this.users.map((user) => {
-                if (user.id === id) {
-                    user.name = name;
-                    user.surn = surn;
-                }
-                return user;
+        add(name, surn) {
+            let id = this.avocados.length + 1;
+            this.avocados.push({
+                id,
+                name,
+                surn
             });
         }
     },
     components: {
-        Avocado
+        AvocadoForm
     }
 }
 </script>
 
 <template>
-    <Avocado v-for="user in avocados" :id="user.id" :name="user.name" :surn="user.surn" :key="user.id"
-        @change="change" />
+    <AvocadoForm @add="add" />
 </template>
 <style>
 .diana {
     color: blue;
-}
-
-.diana1 {
-    color: red;
 }
 </style>
