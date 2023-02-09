@@ -1,15 +1,20 @@
 <script>
 export default {
-    emits: ['show'],
-    data() {
-        return {
-        }
+    props: {
+        id: Number,
+        name: String,
+        surn: String,
     },
+    emits: ['remove'],
 
 }
 </script>
 
 <template>
-    <button class="diana" @click="$emit('show', 'Djulietta', '2024')">
-        console </button>
+    <p class="diana"> {{ name }}</p>
+    <p class="diana1">{{ surn }}</p>
+
+    <button @click="$emit('remove', id)">
+        delete
+    </button>
 </template>
