@@ -1,44 +1,50 @@
 <script>
-import Avocado from './components/User.vue'
 
 export default {
     data() {
         return {
-            diana: [
-                {
-                    id: 1,
-                    name: 'Djuliet',
-                    salary: 730,
-                    age: 20,
-                },
-                {
-                    id: 2,
-                    name: 'Vector',
-                    salary: 1000,
-                    age: 26,
-                },
-                {
-                    id: 3,
-                    name: 'Flaffi',
-                    salary: 300,
-                    age: 10,
-                }
-            ]
+            a: 'Vector',
+            b: 'Flaffi',
+            c: 'Djuliet',
+            Avocado: true,
         }
     },
-    components: {
-        Avocado
+    methods: {
+        Diana() {
+            alert('Avocado');
+        },
     }
 }
 </script>
 
 <template>
-    <Avocado v-for="Avocado in diana" :name="Avocado.name" :salary="Avocado.salary" :age="Avocado.age"
-        :key="Avocado.id" />
+    <!--В этом задании был только текст. Прочитала, ознакомилась.-->
+    <button class="diana" @click="Diana">Avocado</button>
+    <br>
+    <p class="diana1">{{ a }}</p>
+    <br>
+    <p class="diana2">{{ b }}</p>
+    <br>
+    <p class="diana3">{{ c }}</p>
 </template>
 <style>
 .diana {
     color: blue;
+    font-size: 20px;
+}
+
+.diana1 {
+    color: red;
+    font-size: 20px;
+}
+
+.diana2 {
+    color: yellow;
+    font-size: 20px;
+}
+
+.diana3 {
+    color: green;
     font-size: 20px;
 }
 </style>

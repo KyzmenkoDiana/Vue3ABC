@@ -1,9 +1,10 @@
-<script>
+<!--<script>
 export default {
-    props: {
-        name: String,
-        salary: Number,
-        age: Number,
+    props: ['initialCounter'],
+    data() {
+        return {
+            counter: this.initialCounter
+        }
     }
 }
 </script>
@@ -11,9 +12,7 @@ export default {
 <template>
     <ul>
         <p class="diana">
-            {{ name }}
-            {{ salary }}
-            {{ age }}
+            {{ counter }}
         </p>
     </ul>
-</template>
+</template>-->
